@@ -1,0 +1,29 @@
+<% include header %>
+
+    <div id="site_content">
+        <div id="content">
+
+            <p>Hallo, ik ben
+                <%= naam %>!</p>
+
+            <p>Ik ben geboren in
+                <%= geboortejaar %>, wat betekent dat ik
+                    <%= (new Date()).getFullYear() - geboortejaar %> oud ben.</p>
+
+            <% if (loopbaan) { -%>
+
+                <p>
+                    <%= loopbaan %> zijn is leuk</p>
+
+                <% } else { -%>
+
+                    <p>Nog niet aan het werk? Geen enkel probleem ;-)</p>
+
+                    <% } -%>
+
+                        <p>
+                            <%- bio %> Tot later!</p>
+        </div>
+    </div>
+
+    <% include footer %>

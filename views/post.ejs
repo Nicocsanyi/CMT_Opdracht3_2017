@@ -1,0 +1,14 @@
+<% include header %>
+    <div id="site_content">
+        <div id="content">
+            <a href="/blog">Ga terug</a>
+            <h3>posted
+                <%- post.date %>
+            </h3>
+            <h2><span><%- post.title %></span> :</h2>
+            <article>
+                <%- post.body %>
+            </article>
+        </div>
+    </div>
+    <% include footer %>

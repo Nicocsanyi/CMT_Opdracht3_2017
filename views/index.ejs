@@ -1,0 +1,24 @@
+<% include header %>
+    <div id="site_content">
+        <div id="content">
+            <h1>Mijn blog berichten</h1>
+            <section>
+                <% var teller = 1; %>
+                    <% posts.forEach(function(post){ %>
+                        <p>
+                            <%- post.date %> :
+                                <a class="post-link" href="<%- post.slug %>">
+                                    <%- post.title %>
+                                </a>
+                                &mdash;
+                                <%- post.summary %>
+                        </p>
+                        <% if (teller !== posts.length) { %>
+                            <span class="divider">* * * * *</span>
+                            <% } %>
+                                <% teller++;}); %>
+            </section>
+        </div>
+    </div>
+
+    <% include footer %>
